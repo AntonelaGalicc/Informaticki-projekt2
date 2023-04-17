@@ -3,13 +3,15 @@
     <v-app-bar app color="gray" dark>
 
       <v-spacer></v-spacer>
-
             <v-row>
                 <v-btn
                   v-for="link in links"
                   :key="link.text"
                   text
                   :to="link.path"
+                  class="mt-2"
+                  cols="12"
+                  md="3"
                 >
                   <v-icon></v-icon>
                   {{ link.text }}
@@ -64,6 +66,7 @@ export default {
     icons: [
         'mdi-facebook',
         'mdi-instagram',
+        'mdi-twitter',
         
       ],
     }),

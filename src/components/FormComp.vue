@@ -1,11 +1,11 @@
 <template>
-  <v-app>
+  <v-app class="#E0E0E0">
      <v-main>
         <v-container fluid fill-height>
            <v-layout align-center justify-center>
               <v-flex xs12 sm8 md4>
                  <v-card class="elevation-12">
-                    <v-toolbar dark color="primary">
+                    <v-toolbar dark color="gray" >
                        <v-toolbar-title>{{isRegister ? stateObj.register.name : stateObj.login.name}} </v-toolbar-title>
                     </v-toolbar>
                     <v-card-text>
@@ -34,7 +34,7 @@
                              required
                           ></v-text-field>
                           <div class="red--text"> {{errorMessage}}</div>
-                          <v-btn type="submit" class="mt-4" color="primary" value="log in">{{isRegister ? stateObj.register.name : stateObj.login.name}}</v-btn>
+                          <v-btn type="submit" class="mt-4" color="grey" value="log in">{{isRegister ? stateObj.register.name : stateObj.login.name}}</v-btn>
                           <div class="grey--text mt-4" v-on:click="isRegister = !isRegister;">
                              {{toggleMessage}}  
                           </div>
@@ -96,3 +96,10 @@ export default {
    }
 };
 </script>
+
+<style>
+   template{
+      background: "https://images.unsplash.com/photo-1629196613836-0a7e2541990a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=834&q=80" ;
+   }
+
+</style>
